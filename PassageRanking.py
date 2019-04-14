@@ -21,8 +21,8 @@ q_max_words=15
 p_max_words=120
 emb_dim=50
 
-The following LoadValidationSet method reads ctf format validation file and creates query, passage feature vectors and also copies labels for each pair.
-the created vectors will be useful to find metrics on validation set after training each epoch which will be useful to decide the best model 
+#The following LoadValidationSet method reads ctf format validation file and creates query, passage feature vectors and also copies labels for each pair.
+#the created vectors will be useful to find metrics on validation set after training each epoch which will be useful to decide the best model 
 def LoadValidationSet(validationfile):
     f = open(validationfile,'r',encoding="utf-8")
     for line in f:
