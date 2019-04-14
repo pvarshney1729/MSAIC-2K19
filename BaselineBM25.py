@@ -49,7 +49,7 @@ def IDF_Generator(corpusfile, delimiter=' ', base=math.e) :
             print(numOfDocuments)                
 
     for word in docFrequencyDict:  #Calculate IDF scores for each word(q_i)
-        docIDFDict[word] = math.log((numOfDocuments - docFrequencyDict[word] +0.5) / (docFrequencyDict[word] + 0.5), base) #Why are you considering "numOfDocuments - docFrequencyDict[word]" instead of just "numOfDocuments"
+        docIDFDict[word] = math.log((numOfDocuments - docFrequencyDict[word] +0.5) / (docFrequencyDict[word] + 0.5), base) #"numOfDocuments - docFrequencyDict[word]" vs using "numOfDocuments"
 
     avgDocLength = totalDocLength / numOfDocuments
 
